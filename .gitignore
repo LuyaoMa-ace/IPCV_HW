@@ -17,3 +17,7 @@ venv/
 # Editor
 .vscode/
 .idea/
+ckpts/
+*.pt
+results.json
+data/
