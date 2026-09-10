@@ -1,0 +1,19 @@
+# macOS junk (FAT32 volume creates these)
+._*
+.DS_Store
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+.apDisk
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Editor
+.vscode/
+.idea/
