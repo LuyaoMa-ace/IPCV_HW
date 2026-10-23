@@ -21,3 +21,4 @@ ckpts/
 *.pt
 results.json
 data/
+ipcv-*.log
