@@ -4,7 +4,7 @@
 #     git clone https://github.com/LuyaoMa-ace/IPCV_HW.git /scratch.hpc/$USER/ipcv_a2/repo
 #     cd /scratch.hpc/$USER/ipcv_a2/repo && bash cluster/setup_env.sh
 #
-# ISOLATION RULES (the same account also hosts another project):
+# ISOLATION RULES (the account also contains a separate Big Data project environment, auto-activated by ~/.bashrc):
 #   * everything lives under /scratch.hpc/$USER/ipcv_a2  (own venv "venv_ipcv", own data, own caches)
 #   * this script NEVER touches ~/.bashrc, /scratch.hpc/$USER/venv, /scratch.hpc/$USER/project or hf_cache
 #   * nothing is installed into any existing venv

@@ -2,7 +2,7 @@
 # Run the whole notebook in one go on a GPU node of the DISI cluster (run `bash cluster/setup_env.sh` first).
 #
 #   cd /scratch.hpc/$USER/ipcv_a2/repo
-#   squeue -u $USER                                          # see what the other project is already running
+#   squeue -u $USER                                          # see what you already have running / queued
 #   sbatch cluster/run_notebook.sbatch                       # fresh run of everything
 #   sbatch --export=ALL,IPCV_SKIP_DONE=1 cluster/run_notebook.sbatch
 #                                                            # re-submit after a crash / time-out: experiments already
@@ -11,13 +11,13 @@
 # Progress: `tail -f ipcv-<jobid>.log` (papermill streams every cell output into the log).
 # The executed notebook (with all outputs) is written cell by cell, so even a killed job leaves a partial result.
 #
-# The partition is rtx2080 on purpose: the l40 nodes are usually busy with the other project, and ResNet-18 /
-# the small custom CNN fit comfortably in 11 GB.
+# The partition is rtx2080 on purpose: the (few) l40 nodes are shared with other students and were observed to be
+# (almost) fully allocated, while ResNet-18 / the small custom CNN fit comfortably in 11 GB.
 #
 #SBATCH --job-name=ipcv-a2
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=name.surname@studio.unibo.it      # TODO: put your address here
-#SBATCH --time=24:00:00                               # TODO: check the limit with `scontrol show partition rtx2080`
+#SBATCH --time=2-00:00:00                             # l40 allows at most 3 days; check rtx2080 with `scontrol show partition rtx2080`
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4                             # rtx2080 nodes have a quad-core CPU; data loading is CPU-bound
