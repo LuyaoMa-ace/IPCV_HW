@@ -19,6 +19,6 @@ venv/
 .idea/
 ckpts/
 *.pt
-results.json
+/results.json
 data/
 ipcv-*.log
