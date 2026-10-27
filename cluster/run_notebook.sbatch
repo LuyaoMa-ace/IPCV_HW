@@ -39,7 +39,7 @@ export IPCV_SKIP_DONE="${IPCV_SKIP_DONE:-0}"
 export TORCH_HOME="$SCRATCH/torch_cache"
 export PYTHONUNBUFFERED=1
 
-NB="${1:-assignment_module_two (4).ipynb}"
+NB="${1:-assignment_module_two.ipynb}"
 OUT="${2:-executed_assignment_module_two.ipynb}"
 
 nvidia-smi || true
